@@ -43,4 +43,18 @@ Start the development server:
       npm start
 
 
+Folder Structure
+The project follows the following folder structure:
+
+public: Contains the public files and the main HTML file.
+src: Contains the source code.
+components: Contains all React components.
+Cart: Contains the Cart component.
+Layout: Contains the Layout component.
+Shop: Contains the Products component.
+UI: Contains reusable UI components (e.g., Notification).
+store: Contains the Redux store setup and slices (reducers) for cart and UI state.
+App.js: The main application component.
+index.js: The entry point of the application.
+
 
