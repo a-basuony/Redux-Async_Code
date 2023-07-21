@@ -36,3 +36,8 @@ This is an E-Commerce Shopping Cart application built with React and Redux, allo
    ```bash
    git clone https://github.com/your-username/e-commerce-shopping-cart.git
    cd e-commerce-shopping-cart
+
+Install dependencies:
+
+
+
