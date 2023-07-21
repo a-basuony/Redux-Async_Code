@@ -38,6 +38,7 @@ This is an E-Commerce Shopping Cart application built with React and Redux, allo
    cd e-commerce-shopping-cart
 
 Install dependencies:
+      npm install
 
 
 
