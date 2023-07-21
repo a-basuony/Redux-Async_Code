@@ -58,3 +58,9 @@ App.js: The main application component.
 index.js: The entry point of the application.
 
 
+License
+This project is licensed under the MIT License.
+
+Feel free to modify and customize this README file to suit your project's specific details and structure. Make sure to update the sections such as "Technologies Used," "Getting Started," and "Folder Structure" with relevant information for your project. Also, don't forget to add your project's license details in the "License" section.
+
+
