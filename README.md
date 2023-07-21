@@ -39,6 +39,6 @@ This is an E-Commerce Shopping Cart application built with React and Redux, allo
 
 Install dependencies:
       npm install
-
+Start the development server:
 
 
