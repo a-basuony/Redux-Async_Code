@@ -1,38 +1,34 @@
-import { useDispatch } from "react-redux";
-import classes from "./CartItem.module.css";
-import { addItemToCart, removeItemFromCart } from "../../store/cartSlice";
+import { useDispatch } from 'react-redux';
+
+import classes from './CartItem.module.css';
+import { cartActions } from '../../store/cart-slice';
 
 const CartItem = (props) => {
   const dispatch = useDispatch();
 
-  const { title, quantity, totalPriceOfItem, price, id } = props.item;
+  const { title, quantity, total, price, id } = props.item;
 
-  const addItemToCartHandler = () => {
+  const removeItemHandler = () => {
+    dispatch(cartActions.removeItemFromCart(id));
+  };
+
+  const addItemHandler = () => {
     dispatch(
-      addItemToCart({
+      cartActions.addItemToCart({
+        id,
         title,
         price,
-        id,
       })
     );
   };
-
-  const removeItemFromCartHandler = () => {
-    dispatch(removeItemFromCart(id));
-  };
-
-  // Ensure price and total are numbers
-  const formattedTotal =
-    typeof totalPriceOfItem === "number" ? totalPriceOfItem.toFixed(2) : "0.00";
-  const formattedPrice = typeof price === "number" ? price.toFixed(2) : "0.00";
 
   return (
     <li className={classes.item}>
       <header>
         <h3>{title}</h3>
         <div className={classes.price}>
-          ${formattedTotal}{" "}
-          <span className={classes.itemprice}>( ${formattedPrice}/item )</span>
+          ${total.toFixed(2)}{' '}
+          <span className={classes.itemprice}>(${price.toFixed(2)}/item)</span>
         </div>
       </header>
       <div className={classes.details}>
@@ -40,8 +36,8 @@ const CartItem = (props) => {
           x <span>{quantity}</span>
         </div>
         <div className={classes.actions}>
-          <button onClick={removeItemFromCartHandler}>-</button>
-          <button onClick={addItemToCartHandler}>+</button>
+          <button onClick={removeItemHandler}>-</button>
+          <button onClick={addItemHandler}>+</button>
         </div>
       </div>
     </li>

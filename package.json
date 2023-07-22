@@ -2,21 +2,21 @@
   "name": "react-complete-guide",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://a-basuony.github.io/Redux-Async_Code",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
+    "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
-    "install": "^0.13.0",
-    "npm": "^9.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-redux": "^8.1.1",
+    "react-redux": "^7.2.2",
     "react-scripts": "^5.0.1",
-    "redux": "^4.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
